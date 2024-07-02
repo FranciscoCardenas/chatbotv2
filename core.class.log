@@ -1,0 +1,7 @@
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5213231156743',
+  to: '15550340906',
+  body: 'SI, POR FAVOR',
+  title_list_reply: undefined
+}
