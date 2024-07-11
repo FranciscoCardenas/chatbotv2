@@ -108,7 +108,10 @@ const InformacionContrato = addKeyword(['1']).addAnswer(
     fetch(apiUrl, requestOptions)
       .then(response => response.json())
       .then(data => {
+     
    if(data.items.length==0){
+
+
     flowDynamic([{body:'No se encontraron datos del numero de cliente *'+ ctx.body+'* . Algo mas en lo que podemos ayudarte?', buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ]}])
     //log(ctx.from,ctx.body,'No se encontraron datos del numero de cliente *'+ ctx.body+'*','CONSULTA INFORMACION DE TUS CONTRATOS','2')
   }else{ 
@@ -116,8 +119,9 @@ const InformacionContrato = addKeyword(['1']).addAnswer(
 //console.log(data.items[0]);
     for(i=0;i<data.items.length;i++){
       
+      console.log(data.items[i])
        
-       flowDynamic([{body: 'Contrato : *'+data.items[i]['numero de contrato']+'* Saldo *'+data.items[i].suma.split(/\s+/).join('')+
+       flowDynamic([{body: 'Contrato : *'+data.items[i]['numero de contrato']+'* \nLocales: *'+data.items[i]['locales']+'*. \nSaldo *'+data.items[i].suma.split(/\s+/).join('')+
        '* \nTermino Vigencia: *'+data.items[i].vigencia_final.split(/\s+/).join(' ')+
        '*  \nRenovación: *'+data.items[i].vigencia_inicial.split(/\s+/).join(' ')+'*' }])
 
@@ -174,7 +178,8 @@ const SaldoContrato = addKeyword(['2']).addAnswer(
         flowDynamic([{body:'No se encontraron datos del contrato *'+ NUMERO_CONTRATO+'* . Algo mas en lo que podemos ayudarte?', buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ]}],null,null,[RespuestaNO])
         //log(ctx.from,ctx.body,'Por favor Ingresa tu numero de contrato','No se encontraron datos del contrato *'+ NUMERO_CONTRATO+'* . Algo mas en lo que podemos ayudarte?','CONSULTAR EL SALDO DE TU CONTRATO','3') 
       }else{ 
-        flowDynamic([{body:'El saldo actual del contrato *'+NUMERO_CONTRATO+'* es de *'+data.items[0].suma.split(/\s+/).join('')+'*, ¿Algo mas en lo que podemos ayudarte?', buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }]}],null,null,[RespuestaNO])
+        console.log(data.items[0])
+        flowDynamic([{body:'El saldo actual del contrato *'+NUMERO_CONTRATO+'* por el local *'+data.items[0].locales+'* es de *'+data.items[0].suma.split(/\s+/).join('')+'*, ¿Algo mas en lo que podemos ayudarte?', buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }]}],null,null,[RespuestaNO])
       //  log(ctx.from,ctx.body,'El saldo actual del contrato *'+NUMERO_CONTRATO+'* es de *'+data.items[0].suma.split(/\s+/).join('')+'*','CONSULTAR EL SALDO DE TU CONTRATO','3')    
       }
 
@@ -375,7 +380,7 @@ const main = async () => {
     const adapterDB = new JsonFileAdapter()
     const adapterFlow = createFlow([flowPrincipal,RespuestaNO])
  
- 
+  
     //Produccion
     const adapterProvider = createProvider(MetaProvider, {
         jwtToken: 'EAAVZCOTzwHAcBO5LjxXJhaQhTiUL3mT56wJo5vsYAmVrgpyeXDC2ooicdJH8iZBGhHU7pHj5Jzg5pqOr3UuEsZCxAyHoxJ65T7ATn4u4SH8akYvowOphVJhTKuHZBN5JPX0rHpWnr9qpnLgNoMYGkPCDn2NNHNkhqDMxJ9rTEtlQQceHDxHvZCfCpLrVL',
@@ -383,16 +388,15 @@ const main = async () => {
         verifyToken: 'LO_QUE_SEA',
         version: 'v17.0',
     })
- 
- 
-  /*
+
+   /*
     const adapterProvider = createProvider(MetaProvider, {
       jwtToken: 'EAALnj1ahRWsBO6qJYluWkcYUKB5GK3kpj0sadHdZA9wXDGJwcRNHcZCbVIaTUhPVVVql6ZAyJQBMLpuDTi33LaQAOChmDHKOCtNtjy8plgSctJxtxEDSJg13BG44sRyv6OC6D82eVZC9DA3eWcMC26UXVtWx3KqHgWgdCsJw7vbSe6eOduDpqNkmMZBAxhM7iZCDakoWaFL1ShAQsLdYSxtOEfjKTSVa1gE5YZATE9JN6BX',
       numberId: '102089836052786',
       verifyToken: 'LO_QUE_SEA',
       version: 'v19.0',
     })
-    */
+      */
     createBot({
         flow: adapterFlow,
         provider: adapterProvider,
