@@ -1,29 +1,34 @@
 const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
 const MetaProvider = require('@bot-whatsapp/provider/meta')
 const JsonFileAdapter = require('@bot-whatsapp/database/json')
+const axios = require('axios');
 
-function log(numero,mensaje,msg_bot,accion,opcion){
+function log(numero, mensaje, msg_bot, accion, opcion) {
   const url = 'https://nuevo.apexdeape.com.mx/ords/apeppdb1/xxschema_contratos/ar1/v1/mensajes-chatbot';
-  const headerslog = new Headers();
-  headerslog.append('NUMERO', numero);
-  headerslog.append('MENSAJE', mensaje);
-  headerslog.append('MSG_BOT', msg_bot);
-  headerslog.append('ACCION', accion);
-  headerslog.append('OPCION', opcion);
-  
+  const headerslog = {
+      'NUMERO': numero,
+      'MENSAJE': mensaje,
+      'MSG_BOT': msg_bot,
+      'ACCION': accion,
+      'OPCION': opcion,
+      'Content-Type': 'application/json' // Asegúrate de incluir el Content-Type
+  };
+
   fetch(url, {
-    method: 'POST', // Cambia a 'GET' si necesitas una solicitud GET
-    headers: headerslog,
-    body: JSON.stringify({}),
+      method: 'POST',
+      headers: headerslog,
+      body: JSON.stringify({}), // Puedes enviar datos aquí si es necesario
   })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
+    
+      .then(data => {
+         // console.log(data); // Manejar la respuesta si es necesario
+      })
+      .catch(error => {
+          console.error('Error al enviar el registro:', error); // Manejar el error de manera adecuada
+      });
 }
+
+
 
 // Opcion 1
 const RespuestaNO= addKeyword(['NO, GRACIAS', ]).addAnswer(['Que tengas un excelente dia'],  {capture:true})
@@ -189,107 +194,117 @@ const SaldoContrato = addKeyword(['2']).addAnswer(
 //Opcion 4
 const pagar = addKeyword(['pagar', 'siguiente']).addAnswer(['ficha'])
 const PagarContrato = addKeyword(['3']).addAnswer(
-    ['Por favor ingresa el numero de tu contrato'],
-    {capture:true
-      },
-    ((ctx,{flowDynamic,fallBack}) =>{
-      log(ctx.from,ctx.body,'Por favor ingresa el numero de tu contrato','VISUALIZAR LA FICHA DE PAGO','4')  
-      
-
+  ['Por favor ingresa el numero de tu contrato'],
+  { capture: true },
+  (ctx, { flowDynamic, fallBack }) => {
+      log(ctx.from, ctx.body, 'Por favor ingresa el numero de tu contrato', 'VISUALIZAR LA FICHA DE PAGO', '4');
 
       var today = new Date();
       var day = today.getDate();
-      console.log(day)
-if (day >5 ){
-  const NUMERO_CONTRATO =String(ctx.body).toUpperCase();  
-  const apiUrl = 'https://nuevo.apexdeape.com.mx/ords/apeppdb1/xxschema_contratos/ar1/v1//Ficha_Pago_Numero_Contrato';
-  
-  // Configurar los headers
-  const headers = new Headers();
-  headers.append('NUMERO_CONTRATO', NUMERO_CONTRATO);
-  
-  // Configurar la solicitud
-  const requestOptions = {
-    method: 'GET',
-    headers: headers,
-  };
-  
-  // Hacer la solicitud
-  fetch(apiUrl, requestOptions)
-    .then(response => response.json())
-    .then(data => {
-      //console.log(data.items[0].cliente_id)
- if(data.items.length==0){
-  flowDynamic([{
-   body:'No se encontraron datos del contrato *'+ NUMERO_CONTRATO+'* . Algo mas en lo que podemos ayudarte?', buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ]}],null,null,[RespuestaNO])
-   //log(ctx.from,ctx.body,'No se encontraron datos del contrato '+ NUMERO_CONTRATO+'','VISUALIZAR LA FICHA DE PAGO','4')  
-      
-  }else{ 
-    //log(ctx.from,ctx.body,'Se le dio correctamente la informacion del '+ NUMERO_CONTRATO+'','VISUALIZAR LA FICHA DE PAGO','4')  
 
-    function obtenerFechaHoraActual() {
-      let ahora = new Date();
-      let opciones = {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-          hour12: true, // Asegura que el formato es de 12 horas
-          timeZone: 'America/Mexico_City' // Ajusta esta línea a tu zona horaria local si es diferente
-      };
-      // Formatear la fecha y hora en cadena
-      let fechaHora = ahora.toLocaleString('es-ES', opciones);
-      
-      // Ajustar AM/PM a minúsculas
-      fechaHora = fechaHora.replace("a. m.", "am").replace("p. m.", "pm");
-      
-      return fechaHora;
-  }
+      if (day > 5) {
+          const NUMERO_CONTRATO = String(ctx.body).toUpperCase();
+          const apiUrl = 'https://nuevo.apexdeape.com.mx/ords/apeppdb1/xxschema_contratos/ar1/v1/Ficha_Pago_Numero_Contrato';
 
-  flowDynamic([{body:'El saldo actual de tu contrato *'+NUMERO_CONTRATO+'* locales ('+ data.items[0].locales +') es *'+data.items[0].suma.split(/\s+/).join('')+'*. \n'
-  + '*Razon social:* ' +data.items[0].razon_social +' \n\n '
-  + 'Para realizar tu pago por *transferencia* \n'
-  +'*Banco:* ' + data.items[0].banco.split(/\s+/).join('')+' \n'
-  +'*Concepto :* ' + data.items[0].referencia_bancaria+' \n'
-  +'*Clabe interbancaria :* ' + data.items[0]['clave interbancaria']+' \n'
-  +'*Clave servicio:* '+data.items[0]['clave de servicio'] + ' ó 000'+data.items[0]['clave de servicio']+' \n\n'
+          // Configurar los headers
+          const headers = {
+              'NUMERO_CONTRATO': NUMERO_CONTRATO,
+          };
+
+          // Hacer la solicitud usando Axios
+          axios.get(apiUrl, { headers })
+              .then(response => {
+                  const responseData = response.data;
+
+                  // Validar si la respuesta contiene datos antes de intentar parsear
+                  if (!responseData || !responseData.items || responseData.items.length === 0) {
+                      flowDynamic([
+                          {
+                              body: 'No se encontraron datos del contrato *' + NUMERO_CONTRATO + '* . ¿Algo más en lo que podemos ayudarte?',
+                              buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }],
+                          }
+                      ], null, null, [RespuestaNO]);
+                  } else {
+                      try {
+                          // Acceder directamente a response.data.items ya que Axios debería devolver un objeto JSON
+                          const data = response.data.items[0];
+
+                          function obtenerFechaHoraActual() {
+                              let ahora = new Date();
+                              let opciones = {
+                                  year: 'numeric',
+                                  month: 'long',
+                                  day: 'numeric',
+                                  hour: '2-digit',
+                                  minute: '2-digit',
+                                  hour12: true,
+                                  timeZone: 'America/Mexico_City'
+                              };
+                              let fechaHora = ahora.toLocaleString('es-ES', opciones);
+                              fechaHora = fechaHora.replace("a. m.", "am").replace("p. m.", "pm");
+                              return fechaHora;
+                          }
+
+                          flowDynamic([
+                              {
+                                  body: 'El saldo actual de tu contrato *' + NUMERO_CONTRATO + '* locales (' + data.locales + ') es *' + data.suma.split(/\s+/).join('') + '*. \n'
+                                      + '*Razón social:* ' + data.razon_social + ' \n\n '
+                                      + 'Para realizar tu pago por *transferencia* \n'
+                                      + '*Banco:* ' + data.banco.split(/\s+/).join('') + ' \n'
+                                      + '*Concepto :* ' + data.referencia_bancaria + ' \n'
+                                      + '*Clabe interbancaria :* ' + data['clave interbancaria'] + ' \n'
+                                      + '*Clave servicio:* ' + data['clave de servicio'] + ' ó 000' + data['clave de servicio'] + ' \n\n'
+                                      + 'Para realizar tu pago por *ventanilla* \n'
+                                      + '*Banco:* ' + data.banco.split(/\s+/).join('') + ' \n'
+                                      + '*Referencia bancaria:* ' + data.ref + ' \n'
+                                      + '*Clave servicio:* ' + data['clave de servicio'] + ' \n\n'
+                                      + '*Cantidad a pagar :* ' + data.saldo.split(/\s+/).join('') + ' \n'
+                                      + '*Complementos de renovación :* ' + data.total.split(/\s+/).join('') + ' \n'
+                                      + '*Total :* ' + data.suma.split(/\s+/).join('') + ' \n'
+                                      + 'Esta consulta de saldo es hasta el día ' + obtenerFechaHoraActual() + ' \n\n'
+                                      + '¿Algo más en lo que te podemos ayudar?',
+                                  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }]
+                              }
+                          ], null, null, [RespuestaNO]);
+                      } catch (error) {
+                          console.error('Error al procesar los datos del contrato:', error);
+                          flowDynamic([
+                              {
+                                  body: 'No se pudieron procesar los datos del contrato ' + NUMERO_CONTRATO + ', ¿Algo más en lo que podemos ayudarte?',
+                                  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }],
+                              }
+                          ], null, null, [RespuestaNO]);
+                      }
+                  }
+              })
+              .catch(error => {
+                  console.error('Error al realizar la solicitud:', error);
+                  flowDynamic([
+                      {
+                          body: 'No se encontraron datos del contrato ' + NUMERO_CONTRATO + ', ¿Algo más en lo que podemos ayudarte?',
+                          buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }],
+                      }
+                  ], null, null, [RespuestaNO]);
+              });
+      } else {
+          flowDynamic([
+              {
+                  body: '⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 6 de cada mes. ¡Gracias por tu comprensión!',
+                  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }],
+              }
+          ], null, null, [RespuestaNO]);
+      }
+  },
+  [RespuestaNO]
+);
+
+
  
-  + 'Para realizar tu pago por *ventanilla* \n'
-  +'*Banco:* ' + data.items[0].banco.split(/\s+/).join('')+' \n'
-  +'*Referencia bancaria:* ' + data.items[0].ref+' \n'
-  +'*Clave servicio:* ' + data.items[0]['clave de servicio']+' \n \n'
 
  
-  +'*Cantidad a pagar :* ' + data.items[0].saldo.split(/\s+/).join('')+' \n'
-  +'*Complementos de renovación :* ' + data.items[0].total.split(/\s+/).join('')+' \n'
-  +'*Total :* ' + data.items[0].suma.split(/\s+/).join('')+  ' \n'
-
-  + 'Esta consulta de saldo es hasta el dia ' + obtenerFechaHoraActual() + ' \n \n'
-
-  +'¿Algo mas en lo que te podemos ayudar?'
-   ,buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }]
-  
-  }],null,null,[RespuestaNO])}})
-    .catch(error => {
-    console.log(error.name)
-    if(error.name='SyntaxError'){
-      flowDynamic([{body:'No se encontraron datos del contrato '+NUMERO_CONTRATO+',¿Algo mas en lo que podemos ayudarte?',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
-    
-      //log(ctx.from,ctx.body,'No se encontraron datos del contrato '+NUMERO_CONTRATO+'','VISUALIZAR LA FICHA DE PAGO','4')  
-    }
-    });
-
-}else{
-  flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 6 de cada mes. ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
-
-}
 
 
-       
-        }), 
-    [RespuestaNO]
-)
+
 
 //OPCION 5 
 const contactoplaza = addKeyword(['4']).addAnswer(
@@ -360,7 +375,7 @@ const main = async () => {
     const adapterDB = new JsonFileAdapter()
     const adapterFlow = createFlow([flowPrincipal,RespuestaNO])
  
-    
+    /*
     //Produccion
     const adapterProvider = createProvider(MetaProvider, {
         jwtToken: 'EAAVZCOTzwHAcBO5LjxXJhaQhTiUL3mT56wJo5vsYAmVrgpyeXDC2ooicdJH8iZBGhHU7pHj5Jzg5pqOr3UuEsZCxAyHoxJ65T7ATn4u4SH8akYvowOphVJhTKuHZBN5JPX0rHpWnr9qpnLgNoMYGkPCDn2NNHNkhqDMxJ9rTEtlQQceHDxHvZCfCpLrVL',
@@ -368,19 +383,14 @@ const main = async () => {
         verifyToken: 'LO_QUE_SEA',
         version: 'v17.0',
     })
-
- /*
+*/
+ 
     const adapterProvider = createProvider(MetaProvider, {
-      jwtToken: 'EAAMtNDakSugBO1U60ufPPuTRS5XJgrlXEy5sZAVWXmkZCgkKu6UxeKHof6YZCHGHXWmxZCZCoq07K2clXIIIoAsoNVLutWS5JodBr6wvQF5NZAdrlH0OtxwCZCd5SlKeNNVGI45U84FZBzmeswezKl2VsaRetefLVF8i2Ork0ZAg7AkbGG5t69sRZBGldacgyEZAZCzbiHSueahY54a1916enzVHZByTdhvNZBbDzMD5lZCXgB65i0ZD',
+      jwtToken: 'EAALnj1ahRWsBO6qJYluWkcYUKB5GK3kpj0sadHdZA9wXDGJwcRNHcZCbVIaTUhPVVVql6ZAyJQBMLpuDTi33LaQAOChmDHKOCtNtjy8plgSctJxtxEDSJg13BG44sRyv6OC6D82eVZC9DA3eWcMC26UXVtWx3KqHgWgdCsJw7vbSe6eOduDpqNkmMZBAxhM7iZCDakoWaFL1ShAQsLdYSxtOEfjKTSVa1gE5YZATE9JN6BX',
       numberId: '102089836052786',
       verifyToken: 'LO_QUE_SEA',
       version: 'v19.0',
     })
-
-    */
-
-
-
     createBot({
         flow: adapterFlow,
         provider: adapterProvider,
