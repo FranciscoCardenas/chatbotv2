@@ -1,15 +1,15 @@
 [
   {
-    "ref": "7440f755-3450-4f38-92d9-17de67f57653",
-    "keyword": "a6ea9544c1c5dc54897763f6b83788dd",
-    "answer": "SI, POR FAVOR",
+    "ref": "5200e1cc-6555-4a74-844f-a18a5c286bf7",
+    "keyword": "60feb2bdd2906a8a56fea8d3eab030a0",
+    "answer": "3",
     "options": {},
     "from": "5213231156743",
-    "refSerialize": "60feb2bdd2906a8a56fea8d3eab030a0"
+    "refSerialize": "7af65864494b12f0f7ef00589f4d3979"
   },
   {
-    "ref": "ans_63dabd16-eac2-4cab-b4a3-6311bd9ecddc",
-    "keyword": "key_6aec79bb-e050-43f7-aad5-6c656d3cb205",
+    "ref": "ans_9fa6d296-dde3-4454-b90a-8a01cfaddb39",
+    "keyword": "key_a0975a23-652d-4fda-adfe-efc478687004",
     "answer": "¡Buen día! Aquí tienes nuestro menú de opciones, Envía el número de la opción que deseas consultar. \n👉 *1* Consulta la informacion de tus contratos\n👉 *2* Consultar el Saldo de tu contrato\n👉 *3* Pagar contrato\n👉 *4* Hablar con un asesor",
     "options": {
       "media": null,
@@ -19,7 +19,7 @@
       "delay": 0,
       "nested": [
         {
-          "ref": "key_ec47c372-0b89-487b-ab34-f25205ceabdc",
+          "ref": "key_d2c6e16b-abc6-4cf6-b963-22c5f2806b9d",
           "keyword": [
             "ya no gracias xd xd"
           ],
@@ -30,8 +30,8 @@
           "refSerialize": "a19987fd430898b602dfccb65535dd0d"
         },
         {
-          "ref": "ans_511f54a3-eefc-4ef7-8544-0c874281b4c2",
-          "keyword": "key_ec47c372-0b89-487b-ab34-f25205ceabdc",
+          "ref": "ans_eb7ca149-77aa-4029-83f3-adb24a13b413",
+          "keyword": "key_d2c6e16b-abc6-4cf6-b963-22c5f2806b9d",
           "answer": "Por favor ingresa tu Rfc",
           "options": {
             "media": null,
@@ -41,7 +41,7 @@
             "delay": 0,
             "nested": [
               {
-                "ref": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+                "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
                 "keyword": [
                   "NO, GRACIAS"
                 ],
@@ -52,8 +52,8 @@
                 "refSerialize": "6450263ad186f6a754c4be74caadce92"
               },
               {
-                "ref": "ans_f0525760-6b26-4759-bc0f-f482cac0e21e",
-                "keyword": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+                "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+                "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
                 "answer": "Que tengas un excelente dia",
                 "options": {
                   "media": null,
@@ -65,16 +65,16 @@
                   "keyword": {},
                   "callback": false
                 },
-                "refSerialize": "33459694bca6c0bb4664516272289013"
+                "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
               }
             ],
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "fb34b23fb2b666b58cf7c8d272369087"
+          "refSerialize": "03055e42373c11fd6f6624e4935f8d1d"
         },
         {
-          "ref": "key_d8c71ec5-b9fe-4256-9029-52a3ad8ab592",
+          "ref": "key_1b5c2964-761d-4663-99a2-d052a839d6c3",
           "keyword": [
             "1"
           ],
@@ -85,8 +85,8 @@
           "refSerialize": "e0b2cd1acac633ea641e2d526690d369"
         },
         {
-          "ref": "ans_187d8f4e-9600-4370-a84c-b5c9a9df3ac7",
-          "keyword": "key_d8c71ec5-b9fe-4256-9029-52a3ad8ab592",
+          "ref": "ans_5a34cbb3-bdde-4b7a-8917-16bf6654a37f",
+          "keyword": "key_1b5c2964-761d-4663-99a2-d052a839d6c3",
           "answer": "Ingresa tu numero de Cliente",
           "options": {
             "media": null,
@@ -96,7 +96,7 @@
             "delay": 0,
             "nested": [
               {
-                "ref": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+                "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
                 "keyword": [
                   "NO, GRACIAS"
                 ],
@@ -107,8 +107,8 @@
                 "refSerialize": "6450263ad186f6a754c4be74caadce92"
               },
               {
-                "ref": "ans_f0525760-6b26-4759-bc0f-f482cac0e21e",
-                "keyword": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+                "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+                "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
                 "answer": "Que tengas un excelente dia",
                 "options": {
                   "media": null,
@@ -120,16 +120,16 @@
                   "keyword": {},
                   "callback": false
                 },
-                "refSerialize": "33459694bca6c0bb4664516272289013"
+                "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
               }
             ],
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "7ad5a31cc7c906a7f0ec6d7428e89794"
+          "refSerialize": "a7baf7cbbce58f718b1b458891f755dc"
         },
         {
-          "ref": "key_537ad7ab-6244-4d4a-af62-344027068636",
+          "ref": "key_6db2aef7-0c5a-4e01-9090-67381e5b020d",
           "keyword": [
             "2"
           ],
@@ -140,8 +140,8 @@
           "refSerialize": "389a29e5d1b72d14d3fa321bb058be56"
         },
         {
-          "ref": "ans_e67236af-069e-43ab-8fff-404690577e58",
-          "keyword": "key_537ad7ab-6244-4d4a-af62-344027068636",
+          "ref": "ans_8c05ba0c-1471-4411-b246-99136427cd8c",
+          "keyword": "key_6db2aef7-0c5a-4e01-9090-67381e5b020d",
           "answer": "Por favor Ingresa tu numero de contrato",
           "options": {
             "media": null,
@@ -151,7 +151,7 @@
             "delay": 0,
             "nested": [
               {
-                "ref": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+                "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
                 "keyword": [
                   "NO, GRACIAS"
                 ],
@@ -162,8 +162,8 @@
                 "refSerialize": "6450263ad186f6a754c4be74caadce92"
               },
               {
-                "ref": "ans_f0525760-6b26-4759-bc0f-f482cac0e21e",
-                "keyword": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+                "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+                "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
                 "answer": "Que tengas un excelente dia",
                 "options": {
                   "media": null,
@@ -175,16 +175,16 @@
                   "keyword": {},
                   "callback": false
                 },
-                "refSerialize": "33459694bca6c0bb4664516272289013"
+                "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
               }
             ],
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "973fb46d52e24edb1b0fab283ab9a73f"
+          "refSerialize": "bf5fda0c0ae79ae556b999ac37eb2958"
         },
         {
-          "ref": "key_065a3340-28d2-4034-8a52-cd7569ece5fb",
+          "ref": "key_4db4d985-9b94-41d7-b483-da70cbff19a6",
           "keyword": [
             "3"
           ],
@@ -195,8 +195,8 @@
           "refSerialize": "f527e0d58165f42aac80200dd9e494bc"
         },
         {
-          "ref": "ans_19c20207-4cee-49ba-96d3-6de7c2d2367d",
-          "keyword": "key_065a3340-28d2-4034-8a52-cd7569ece5fb",
+          "ref": "ans_98d3e03e-098c-4e43-a8b2-836c42152ece",
+          "keyword": "key_4db4d985-9b94-41d7-b483-da70cbff19a6",
           "answer": "Por favor ingresa el numero de tu contrato",
           "options": {
             "media": null,
@@ -206,7 +206,7 @@
             "delay": 0,
             "nested": [
               {
-                "ref": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+                "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
                 "keyword": [
                   "NO, GRACIAS"
                 ],
@@ -217,8 +217,8 @@
                 "refSerialize": "6450263ad186f6a754c4be74caadce92"
               },
               {
-                "ref": "ans_f0525760-6b26-4759-bc0f-f482cac0e21e",
-                "keyword": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+                "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+                "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
                 "answer": "Que tengas un excelente dia",
                 "options": {
                   "media": null,
@@ -230,16 +230,16 @@
                   "keyword": {},
                   "callback": false
                 },
-                "refSerialize": "33459694bca6c0bb4664516272289013"
+                "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
               }
             ],
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "be37e9e1b441a32be472e347ed721d15"
+          "refSerialize": "bbacdc3a1a93e8eb17162ef4cb472e7d"
         },
         {
-          "ref": "key_4377f2cf-13d2-4f31-9e53-bd74b31c4c92",
+          "ref": "key_3c74570c-6edf-4825-ac5f-24626f70a3ac",
           "keyword": [
             "4"
           ],
@@ -250,8 +250,8 @@
           "refSerialize": "14544ecc4392f95d9b995ed896ea75dc"
         },
         {
-          "ref": "ans_26e59357-8d6f-4c59-80f3-526c61277d57",
-          "keyword": "key_4377f2cf-13d2-4f31-9e53-bd74b31c4c92",
+          "ref": "ans_54f38065-4406-4f57-956b-d6805905b83d",
+          "keyword": "key_3c74570c-6edf-4825-ac5f-24626f70a3ac",
           "answer": "Por favor Ingresa tu numero de contrato",
           "options": {
             "media": null,
@@ -261,7 +261,7 @@
             "delay": 0,
             "nested": [
               {
-                "ref": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+                "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
                 "keyword": [
                   "NO, GRACIAS"
                 ],
@@ -272,8 +272,8 @@
                 "refSerialize": "6450263ad186f6a754c4be74caadce92"
               },
               {
-                "ref": "ans_f0525760-6b26-4759-bc0f-f482cac0e21e",
-                "keyword": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+                "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+                "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
                 "answer": "Que tengas un excelente dia",
                 "options": {
                   "media": null,
@@ -285,16 +285,16 @@
                   "keyword": {},
                   "callback": false
                 },
-                "refSerialize": "33459694bca6c0bb4664516272289013"
+                "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
               }
             ],
             "keyword": {},
             "callback": true
           },
-          "refSerialize": "401a25a33c54c9ba0467a5d01821770f"
+          "refSerialize": "c69e4e4a605f0f24df655dcb1e22c10e"
         },
         {
-          "ref": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+          "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
           "keyword": [
             "NO, GRACIAS"
           ],
@@ -305,8 +305,8 @@
           "refSerialize": "6450263ad186f6a754c4be74caadce92"
         },
         {
-          "ref": "ans_f0525760-6b26-4759-bc0f-f482cac0e21e",
-          "keyword": "key_105dfc68-8831-4fb4-8b0b-57a008490de9",
+          "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+          "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
           "answer": "Que tengas un excelente dia",
           "options": {
             "media": null,
@@ -318,13 +318,499 @@
             "keyword": {},
             "callback": false
           },
-          "refSerialize": "33459694bca6c0bb4664516272289013"
+          "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
         }
       ],
       "keyword": {},
       "callback": false
     },
-    "refSerialize": "0b55417339ac7afaccd75b48575a29cb",
+    "refSerialize": "cad9054fd243c8a25df9f650c31f44da",
     "from": "5213231156743"
+  },
+  {
+    "ref": "c75f0a9b-95b8-4776-95b7-8c445d52a708",
+    "keyword": "cad9054fd243c8a25df9f650c31f44da",
+    "answer": "3",
+    "options": {},
+    "from": "5213231156743",
+    "refSerialize": "7af65864494b12f0f7ef00589f4d3979"
+  },
+  {
+    "ref": "ans_98d3e03e-098c-4e43-a8b2-836c42152ece",
+    "keyword": "key_4db4d985-9b94-41d7-b483-da70cbff19a6",
+    "answer": "Por favor ingresa el numero de tu contrato",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [
+        {
+          "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+          "keyword": [
+            "NO, GRACIAS"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "6450263ad186f6a754c4be74caadce92"
+        },
+        {
+          "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+          "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+          "answer": "Que tengas un excelente dia",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
+        }
+      ],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "bbacdc3a1a93e8eb17162ef4cb472e7d",
+    "from": "5213231156743"
+  },
+  {
+    "ref": "00340202-ebf4-4a1e-a8ef-fb72f0937120",
+    "keyword": "bbacdc3a1a93e8eb17162ef4cb472e7d",
+    "answer": "Pue3913",
+    "options": {},
+    "from": "5213231156743",
+    "refSerialize": "0bfa094c5ab1136e00cfeb11e1c9e7c7"
+  },
+  {
+    "ref": "167514d1-e222-4c1f-9f6b-a0947c5549a1",
+    "answer": "El saldo actual de tu contrato *PUE3913* locales (67) es *-$0.60*. \n*Razón social:* Plaza Lopez Cotilla, S.A. de C.V. \n\n Para realizar tu pago por *transferencia* \n*Banco:* HSBC \n*Concepto :* 40501P0672ZMKKF8 \n*Clabe interbancaria :* 021180550300060924 \n*Clave servicio:* 6029 ó 0006029 \n\nPara realizar tu pago por *ventanilla* \n*Banco:* HSBC \n*Referencia bancaria:* REF1: 40501,  REF2: P0672,   REF3: ZMKKF8 \n*Clave servicio:* 6029 \n\n*Cantidad a pagar :* -$0.60 \n*Complementos de renovación :* $0.00 \n*Total :* -$0.60 \nEsta consulta de saldo es hasta el día 11 de julio de 2024, 11:49 a. m. \n\n¿Algo más en lo que te podemos ayudar?",
+    "options": {
+      "media": null,
+      "buttons": [
+        {
+          "body": "SI, POR FAVOR"
+        },
+        {
+          "body": "NO, GRACIAS"
+        }
+      ],
+      "capture": false
+    },
+    "from": "5213231156743",
+    "refSerialize": "d68595a0d1e7e8b5b53adea7ae923a6e"
+  },
+  {
+    "ref": "9b0b4a8f-18ae-4d48-8fd5-a4280995c15d",
+    "keyword": "0bfa094c5ab1136e00cfeb11e1c9e7c7",
+    "answer": "SI, POR FAVOR",
+    "options": {},
+    "from": "5213231156743",
+    "refSerialize": "60feb2bdd2906a8a56fea8d3eab030a0"
+  },
+  {
+    "ref": "ans_9fa6d296-dde3-4454-b90a-8a01cfaddb39",
+    "keyword": "key_a0975a23-652d-4fda-adfe-efc478687004",
+    "answer": "¡Buen día! Aquí tienes nuestro menú de opciones, Envía el número de la opción que deseas consultar. \n👉 *1* Consulta la informacion de tus contratos\n👉 *2* Consultar el Saldo de tu contrato\n👉 *3* Pagar contrato\n👉 *4* Hablar con un asesor",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [
+        {
+          "ref": "key_d2c6e16b-abc6-4cf6-b963-22c5f2806b9d",
+          "keyword": [
+            "ya no gracias xd xd"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "a19987fd430898b602dfccb65535dd0d"
+        },
+        {
+          "ref": "ans_eb7ca149-77aa-4029-83f3-adb24a13b413",
+          "keyword": "key_d2c6e16b-abc6-4cf6-b963-22c5f2806b9d",
+          "answer": "Por favor ingresa tu Rfc",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [
+              {
+                "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+                "keyword": [
+                  "NO, GRACIAS"
+                ],
+                "options": {
+                  "sensitive": false,
+                  "regex": false
+                },
+                "refSerialize": "6450263ad186f6a754c4be74caadce92"
+              },
+              {
+                "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+                "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+                "answer": "Que tengas un excelente dia",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": false
+                },
+                "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
+              }
+            ],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "03055e42373c11fd6f6624e4935f8d1d"
+        },
+        {
+          "ref": "key_1b5c2964-761d-4663-99a2-d052a839d6c3",
+          "keyword": [
+            "1"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "e0b2cd1acac633ea641e2d526690d369"
+        },
+        {
+          "ref": "ans_5a34cbb3-bdde-4b7a-8917-16bf6654a37f",
+          "keyword": "key_1b5c2964-761d-4663-99a2-d052a839d6c3",
+          "answer": "Ingresa tu numero de Cliente",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [
+              {
+                "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+                "keyword": [
+                  "NO, GRACIAS"
+                ],
+                "options": {
+                  "sensitive": false,
+                  "regex": false
+                },
+                "refSerialize": "6450263ad186f6a754c4be74caadce92"
+              },
+              {
+                "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+                "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+                "answer": "Que tengas un excelente dia",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": false
+                },
+                "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
+              }
+            ],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "a7baf7cbbce58f718b1b458891f755dc"
+        },
+        {
+          "ref": "key_6db2aef7-0c5a-4e01-9090-67381e5b020d",
+          "keyword": [
+            "2"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "389a29e5d1b72d14d3fa321bb058be56"
+        },
+        {
+          "ref": "ans_8c05ba0c-1471-4411-b246-99136427cd8c",
+          "keyword": "key_6db2aef7-0c5a-4e01-9090-67381e5b020d",
+          "answer": "Por favor Ingresa tu numero de contrato",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [
+              {
+                "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+                "keyword": [
+                  "NO, GRACIAS"
+                ],
+                "options": {
+                  "sensitive": false,
+                  "regex": false
+                },
+                "refSerialize": "6450263ad186f6a754c4be74caadce92"
+              },
+              {
+                "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+                "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+                "answer": "Que tengas un excelente dia",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": false
+                },
+                "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
+              }
+            ],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "bf5fda0c0ae79ae556b999ac37eb2958"
+        },
+        {
+          "ref": "key_4db4d985-9b94-41d7-b483-da70cbff19a6",
+          "keyword": [
+            "3"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "f527e0d58165f42aac80200dd9e494bc"
+        },
+        {
+          "ref": "ans_98d3e03e-098c-4e43-a8b2-836c42152ece",
+          "keyword": "key_4db4d985-9b94-41d7-b483-da70cbff19a6",
+          "answer": "Por favor ingresa el numero de tu contrato",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [
+              {
+                "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+                "keyword": [
+                  "NO, GRACIAS"
+                ],
+                "options": {
+                  "sensitive": false,
+                  "regex": false
+                },
+                "refSerialize": "6450263ad186f6a754c4be74caadce92"
+              },
+              {
+                "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+                "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+                "answer": "Que tengas un excelente dia",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": false
+                },
+                "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
+              }
+            ],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "bbacdc3a1a93e8eb17162ef4cb472e7d"
+        },
+        {
+          "ref": "key_3c74570c-6edf-4825-ac5f-24626f70a3ac",
+          "keyword": [
+            "4"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "14544ecc4392f95d9b995ed896ea75dc"
+        },
+        {
+          "ref": "ans_54f38065-4406-4f57-956b-d6805905b83d",
+          "keyword": "key_3c74570c-6edf-4825-ac5f-24626f70a3ac",
+          "answer": "Por favor Ingresa tu numero de contrato",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [
+              {
+                "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+                "keyword": [
+                  "NO, GRACIAS"
+                ],
+                "options": {
+                  "sensitive": false,
+                  "regex": false
+                },
+                "refSerialize": "6450263ad186f6a754c4be74caadce92"
+              },
+              {
+                "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+                "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+                "answer": "Que tengas un excelente dia",
+                "options": {
+                  "media": null,
+                  "buttons": [],
+                  "capture": true,
+                  "child": null,
+                  "delay": 0,
+                  "nested": [],
+                  "keyword": {},
+                  "callback": false
+                },
+                "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
+              }
+            ],
+            "keyword": {},
+            "callback": true
+          },
+          "refSerialize": "c69e4e4a605f0f24df655dcb1e22c10e"
+        },
+        {
+          "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+          "keyword": [
+            "NO, GRACIAS"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "6450263ad186f6a754c4be74caadce92"
+        },
+        {
+          "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+          "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+          "answer": "Que tengas un excelente dia",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
+        }
+      ],
+      "keyword": {},
+      "callback": false
+    },
+    "refSerialize": "cad9054fd243c8a25df9f650c31f44da",
+    "from": "5213231156743"
+  },
+  {
+    "ref": "89d8a160-c5c5-40cc-91fb-8804e871a577",
+    "keyword": "cad9054fd243c8a25df9f650c31f44da",
+    "answer": "4",
+    "options": {},
+    "from": "5213231156743",
+    "refSerialize": "e8139b7fa2fbc1b48f247924f8ad1961"
+  },
+  {
+    "ref": "ans_54f38065-4406-4f57-956b-d6805905b83d",
+    "keyword": "key_3c74570c-6edf-4825-ac5f-24626f70a3ac",
+    "answer": "Por favor Ingresa tu numero de contrato",
+    "options": {
+      "media": null,
+      "buttons": [],
+      "capture": true,
+      "child": null,
+      "delay": 0,
+      "nested": [
+        {
+          "ref": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+          "keyword": [
+            "NO, GRACIAS"
+          ],
+          "options": {
+            "sensitive": false,
+            "regex": false
+          },
+          "refSerialize": "6450263ad186f6a754c4be74caadce92"
+        },
+        {
+          "ref": "ans_91781bc4-eb91-46b7-b100-2424088d793c",
+          "keyword": "key_6ffc77be-f352-4427-bd27-972631d6d8d5",
+          "answer": "Que tengas un excelente dia",
+          "options": {
+            "media": null,
+            "buttons": [],
+            "capture": true,
+            "child": null,
+            "delay": 0,
+            "nested": [],
+            "keyword": {},
+            "callback": false
+          },
+          "refSerialize": "9f52039ba52bd83349c34a5d9e4b2a91"
+        }
+      ],
+      "keyword": {},
+      "callback": true
+    },
+    "refSerialize": "c69e4e4a605f0f24df655dcb1e22c10e",
+    "from": "5213231156743"
+  },
+  {
+    "ref": "2594259d-838f-4c2d-9786-5042312c0322",
+    "keyword": "c69e4e4a605f0f24df655dcb1e22c10e",
+    "answer": "Pue3913",
+    "options": {},
+    "from": "5213231156743",
+    "refSerialize": "0bfa094c5ab1136e00cfeb11e1c9e7c7"
+  },
+  {
+    "ref": "5cd23709-7ee5-43fc-b69a-59d320406d15",
+    "answer": "Para aclacion de dudas comunicate con ADMNISTRACIÓN DE LA PLAZA al numero 5512959600 o un correo a la siguiente direccion *prodriguez@apeplazas.com*, en un horario de 10:00 horas a las 20:00 horas ¿Algo mas en lo que podemos ayudarte?",
+    "options": {
+      "media": null,
+      "buttons": [
+        {
+          "body": "SI, POR FAVOR"
+        },
+        {
+          "body": "NO, GRACIAS"
+        }
+      ],
+      "capture": false
+    },
+    "from": "5213231156743",
+    "refSerialize": "7e18721086dcf1af8d32ba9141b480f3"
   }
 ]

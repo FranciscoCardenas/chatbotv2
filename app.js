@@ -375,7 +375,7 @@ const main = async () => {
     const adapterDB = new JsonFileAdapter()
     const adapterFlow = createFlow([flowPrincipal,RespuestaNO])
  
-    /*
+ 
     //Produccion
     const adapterProvider = createProvider(MetaProvider, {
         jwtToken: 'EAAVZCOTzwHAcBO5LjxXJhaQhTiUL3mT56wJo5vsYAmVrgpyeXDC2ooicdJH8iZBGhHU7pHj5Jzg5pqOr3UuEsZCxAyHoxJ65T7ATn4u4SH8akYvowOphVJhTKuHZBN5JPX0rHpWnr9qpnLgNoMYGkPCDn2NNHNkhqDMxJ9rTEtlQQceHDxHvZCfCpLrVL',
@@ -383,14 +383,16 @@ const main = async () => {
         verifyToken: 'LO_QUE_SEA',
         version: 'v17.0',
     })
-*/
  
+ 
+  /*
     const adapterProvider = createProvider(MetaProvider, {
       jwtToken: 'EAALnj1ahRWsBO6qJYluWkcYUKB5GK3kpj0sadHdZA9wXDGJwcRNHcZCbVIaTUhPVVVql6ZAyJQBMLpuDTi33LaQAOChmDHKOCtNtjy8plgSctJxtxEDSJg13BG44sRyv6OC6D82eVZC9DA3eWcMC26UXVtWx3KqHgWgdCsJw7vbSe6eOduDpqNkmMZBAxhM7iZCDakoWaFL1ShAQsLdYSxtOEfjKTSVa1gE5YZATE9JN6BX',
       numberId: '102089836052786',
       verifyToken: 'LO_QUE_SEA',
       version: 'v19.0',
     })
+    */
     createBot({
         flow: adapterFlow,
         provider: adapterProvider,
