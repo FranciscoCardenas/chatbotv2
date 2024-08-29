@@ -1,0 +1,148 @@
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5213231156743',
+  to: '15550340906',
+  body: 'SI, POR FAVOR',
+  title_list_reply: undefined
+}
+[handleMsg]:  { type: 'text', from: '5213231156743', to: '15550340906', body: '2' }
+[handleMsg]:  {
+  type: 'text',
+  from: '5213231156743',
+  to: '15550340906',
+  body: 'Tij2434'
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'SI, POR FAVOR',
+  title_list_reply: undefined
+}
+[handleMsg]:  { type: 'text', from: '5217226496693', to: '15550340906', body: '2' }
+[handleMsg]:  {
+  type: 'text',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'SLC1464'
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'SI, POR FAVOR',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'NO, GRACIAS',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'text',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'Hola'
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'SI, POR FAVOR',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'NO, GRACIAS',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'text',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'Hola'
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'SI, POR FAVOR',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'NO, GRACIAS',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'text',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'Hola'
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'SI, POR FAVOR',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'NO, GRACIAS',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'text',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'Hola'
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'SI, POR FAVOR',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'NO, GRACIAS',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'text',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'Hola'
+}
+[handleMsg]:  {
+  type: 'text',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'Hola'
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'SI, POR FAVOR',
+  title_list_reply: undefined
+}
+[handleMsg]:  {
+  type: 'interactive',
+  from: '5217226496693',
+  to: '15550340906',
+  body: 'NO, GRACIAS',
+  title_list_reply: undefined
+}
