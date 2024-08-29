@@ -163,7 +163,7 @@ const SaldoContrato = addKeyword(['2']).addAnswer(
       var day = today.getDate();
 
       if(day <= 5 || day ==11 ){
-        if (day ==11 || day == 26){ 
+        if (day ==11 ){ 
           flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 12 de cada mes por el cargo de conceptos e Intereses. . ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
           }else{
             flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 6 de cada mes. ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
@@ -242,8 +242,8 @@ const PagarContrato = addKeyword(['3']).addAnswer(
       var today = new Date();
       var day = today.getDate();
 
-      if (day <=5 || day ==11 || day ==26){
-        if (day ==11 || day == 26){ 
+      if (day <=5 || day ==11){
+        if (day ==11 ){ 
         flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 12 de cada mes por el cargo de conceptos e Intereses. . ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
         }else{
           flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 6 de cada mes. ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
@@ -413,23 +413,23 @@ const main = async () => {
     const adapterDB = new JsonFileAdapter()
     const adapterFlow = createFlow([flowPrincipal,RespuestaNO])
  
-  /*
+
     //Produccion
     const adapterProvider = createProvider(MetaProvider, {
-        jwtToken: 'EAAVZCOTzwHAcBO5LjxXJhaQhTiUL3mT56wJo5vsYAmVrgpyeXDC2ooicdJH8iZBGhHU7pHj5Jzg5pqOr3UuEsZCxAyHoxJ65T7ATn4u4SH8akYvowOphVJhTKuHZBN5JPX0rHpWnr9qpnLgNoMYGkPCDn2NNHNkhqDMxJ9rTEtlQQceHDxHvZCfCpLrVL',
+        jwtToken: 'EAAVZCOTzwHAcBO9VmEZBZAembgq6hS8lAlyzmZAcIhZBwg6GxE0BdHhIjC75I2f6ERyZBlAxosBx4OvHNAhO7cOK0WZAZAP6sBntwDvdMP8RbaejZB6PdWois6TOwCggsbRgrRBDZADNRg6WNZA9E3KpjNnqoCS56dHyZB5M6tfNTQJ3U6vhuAHaVUro2PXqOVUkG1Mv',
         numberId: '119447597909937',
         verifyToken: 'LO_QUE_SEA',
         version: 'v17.0',
     })
 
-   */
+ /*
     const adapterProvider = createProvider(MetaProvider, {
       jwtToken: 'EAALnj1ahRWsBO5qnuFaUKSry5TO4EET1ciXOoMrr8W0F81c2ULEMFflw7kuXwMjlPanQhjQZBXKzETULudjeXbyB78ECwWiizcHYFVcy0tZA9KdU3d1QZA71Q7iSZBKI50ONZBaSrPkBIa0DoHCZB9IoTONAlRGSIHTtZB1RAPFZBZBoSzmPVUGiWmZBYhTaHkWGQGjIktXZCLxXIYzD5IXKA1rvWMtLNS8tiehwPjYDfrR7b4ZD',
       numberId: '102089836052786',
       verifyToken: 'LO_QUE_SEA',
       version: 'v20.0',
     })
-    
+    */
     createBot({
         flow: adapterFlow,
         provider: adapterProvider,
