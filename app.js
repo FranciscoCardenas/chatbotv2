@@ -303,7 +303,8 @@ const PagarContrato = addKeyword(['3']).addAnswer(
         +'*Banco:* ' + data.items[0].banco.split(/\s+/).join('')+' \n'
         +'*Concepto :* ' + data.items[0].referencia_bancaria+' \n'
         +'*Clabe interbancaria :* ' + data.items[0]['clave interbancaria']+' \n'
-        +'*Clave servicio:* '+data.items[0]['clave de servicio'] + ' ó 000'+data.items[0]['clave de servicio']+' \n\n'
+         +'*Referencia :* 5503 o 0005503 \n'
+      //  +'*Clave servicio:* '+data.items[0]['clave de servicio'] + ' ó 000'+data.items[0]['clave de servicio']+' \n\n'
        
         + 'Para realizar tu pago por *ventanilla* \n'
         +'*Banco:* ' + data.items[0].banco.split(/\s+/).join('')+' \n'
