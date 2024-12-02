@@ -162,11 +162,11 @@ const SaldoContrato = addKeyword(['2']).addAnswer(
       var today = new Date();
       var day = today.getDate();
 
-      if(day <= 5 || day ==11 ){
+      if(day ==42 ){
         if (day ==11 ){ 
-          flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 12 de cada mes por el cargo de conceptos e Intereses. . ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
-          }else{
-            flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 6 de cada mes. ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
+      //    flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 12 de cada mes por el cargo de conceptos e Intereses. . ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
+      //    }else{
+      //      flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 6 de cada mes. ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
   
           }
       }else{
@@ -211,7 +211,7 @@ const SaldoContrato = addKeyword(['2']).addAnswer(
         //log(ctx.from,ctx.body,'Por favor Ingresa tu numero de contrato','No se encontraron datos del contrato *'+ NUMERO_CONTRATO+'* . Algo mas en lo que podemos ayudarte?','CONSULTAR EL SALDO DE TU CONTRATO','3') 
       }else{ 
         flowDynamic([{body:'El saldo actual del contrato *'+NUMERO_CONTRATO+'* es de *'+data.items[0].suma.split(/\s+/).join('')
-           + '* Esta consulta de saldo es hasta el día '+obtenerFechaHoraActual()+ ' Puede variar por el cargo de conceptos e Intereses.'  + ' \n \n'
+           + '* La información de los saldo consultados es de carácter informativa, vigente hasta el día  '+obtenerFechaHoraActual()+ ' Información que puede variar y modificarse por el cargo de otros conceptos e Intereses.'  + ' \n \n'
           +' ¿Algo mas en lo que podemos ayudarte?', buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }]}],null,null,[RespuestaNO])
       //  log(ctx.from,ctx.body,'El saldo actual del contrato *'+NUMERO_CONTRATO+'* es de *'+data.items[0].suma.split(/\s+/).join('')+'*','CONSULTAR EL SALDO DE TU CONTRATO','3')    
       }
@@ -242,12 +242,12 @@ const PagarContrato = addKeyword(['3']).addAnswer(
       var today = new Date();
       var day = today.getDate();
 
-      if (day <=5 || day ==11){
+      if (day ==42){
         if (day ==11 ){ 
-        flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 12 de cada mes por el cargo de conceptos e Intereses. . ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
+      /*  flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 12 de cada mes por el cargo de conceptos e Intereses. . ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
         }else{
           flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 6 de cada mes. ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
-
+*/
         }
       }else{
       
@@ -316,7 +316,7 @@ const PagarContrato = addKeyword(['3']).addAnswer(
         +'*Complementos de renovación :* ' + data.items[0].total.split(/\s+/).join('')+' \n'
         +'*Total :* ' + data.items[0].suma.split(/\s+/).join('')+  ' \n'
       
-        + 'Esta consulta de saldo es hasta el día '+obtenerFechaHoraActual()+ ' Puede variar por el cargo de conceptos e Intereses.'  + ' \n \n'
+        + 'La información de los saldo consultados es de carácter informativa, vigente hasta el día '+obtenerFechaHoraActual()+ ' Información que puede variar y modificarse por el cargo de otros conceptos e Intereses.'  + ' \n \n'
       
         +'¿Algo mas en lo que te podemos ayudar?'
          ,buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }]
