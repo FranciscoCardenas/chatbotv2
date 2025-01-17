@@ -127,8 +127,32 @@ const InformacionContrato = addKeyword(['1']).addAnswer(
 
    
        if (i === data.items.length - 1) {
+        function obtenerFechaHoraActual() {
+          let ahora = new Date();
+          let opciones = {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: true, // Asegura que el formato es de 12 horas
+              timeZone: 'America/Mexico_City' // Ajusta esta línea a tu zona horaria local si es diferente
+          };
+          // Formatear la fecha y hora en cadena
+          let fechaHora = ahora.toLocaleString('es-ES', opciones);
+          
+          // Ajustar AM/PM a minúsculas
+          fechaHora = fechaHora.replace("a. m.", "am").replace("p. m.", "pm");
+          
+          return fechaHora;
+      }
+    
+
         setTimeout(() => {
-            flowDynamic([{body:'¿Algo mas en lo que podemos ayudarte?', buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }]}]) 
+            flowDynamic([{body:
+              'La información de los saldo consultados es de carácter informativa, vigente hasta el día '+obtenerFechaHoraActual()+ ' Información que puede variar y modificarse por el cargo de otros conceptos e Intereses.'  + ' \n \n'
+   +
+              '¿Algo mas en lo que podemos ayudarte?', buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' }]}]) 
           //  log(ctx.from,ctx.body,'Se le dio correctamente la informacion','CONSULTA INFORMACION DE TUS CONTRATOS','2')
         }, 3000);
       
@@ -162,7 +186,7 @@ const SaldoContrato = addKeyword(['2']).addAnswer(
       var today = new Date();
       var day = today.getDate();
 
-      if(day ==42 ){
+      if(day ==42 ){// nota del 02/12/2024 no lo borre porque tarde o temprano te lo van a pedir de nuevo
         if (day ==11 ){ 
       //    flowDynamic([{body:'⚠️ Te recordamos que la información de tu(s) contrato(s) estará disponible para consulta a partir del día 12 de cada mes por el cargo de conceptos e Intereses. . ¡Gracias por tu comprensión!',  buttons: [{ body: 'SI, POR FAVOR' }, { body: 'NO, GRACIAS' } ],}],null,null,[RespuestaNO])
       //    }else{
@@ -296,6 +320,8 @@ const PagarContrato = addKeyword(['3']).addAnswer(
             
             return fechaHora;
         }
+        + 'La información de los saldo consultados es de carácter informativa, vigente hasta el día '+obtenerFechaHoraActual()+ ' Información que puede variar y modificarse por el cargo de otros conceptos e Intereses.'  + ' \n \n'
+     
       
         flowDynamic([{body:'El saldo actual de tu contrato *'+NUMERO_CONTRATO+'* locales ('+ data.items[0].locales +') es *'+data.items[0].suma.split(/\s+/).join('')+'*. \n'
         + '*Razon social:* ' +data.items[0].razon_social +' \n\n '
